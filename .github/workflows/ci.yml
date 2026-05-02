@@ -25,10 +25,10 @@ jobs:
             docker rm frontend-app || true
             
             
-            rm -rf ci-cd || true
+           rm -rf ci-cd || true
             git clone https://github.com/mbhavanasri03-png/ci-cd.git
             cd ci-cd
 
-           
-            docker build -t frontend-app .
-            docker run -d -p 80:80 --name frontend-app frontend-app
+            
+            sudo docker build -t frontend-app .
+            sudo docker run -d -p 80:80 --name frontend-app frontend-app
