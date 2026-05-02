@@ -24,11 +24,14 @@ jobs:
             sudo docker stop frontend-app || true
             sudo docker rm frontend-app || true
             
-           
-            rm -rf ci-cd || true
-            git clone https://github.com/mbhavanasri03-png/ci-cd.git
-            cd ci-cd
             
+            sudo rm -rf ci-cd
+            git clone https://github.com/mbhavanasri03-png/ci-cd.git
+            
+            
+            cd ci-cd
+            ls -al 
+
             
             sudo docker build -t frontend-app .
             sudo docker run -d -p 80:80 --name frontend-app frontend-app
